@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.qatros.binamurid">
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
+    <application
+        android:name="com.qatros.binamurid.App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_binamurid"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Qtnbinamurid"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name="com.qatros.binamurid.ui.profile.SendEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.login.ResendEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.otp.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.chat.ChatDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.chat.MessageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.chat.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.pedagogue.daily.DailyPedagogueAllActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.parent.daily.DailyParentsAllActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.parent.childProfile.ChildProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.qatros.binamurid.ui.register.RegisterDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.pedagogue.scanChildren.ScanChildrenResultActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.resetPassword.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.parent.child.FormChildActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.qatros.binamurid.ui.pedagogue.scanChildren.ScanChildrenActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.landing.LandingNextActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.parent.navigation.NavigationParentActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.qatros.binamurid.ui.pedagogue.navigation.NavigationPedagogueActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.landing.LandingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.parent.home.HomeScanListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.parent.scan.ScanBarcodeParentsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.qatros.binamurid.ui.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.qatros.binamurid"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

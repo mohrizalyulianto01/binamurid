@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_parent_profile"
+    app:startDestination="@id/menuProfile">
+
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="com.qatros.binamurid.ui.profile.MenuProfileFragment"
+        android:label="fragment_parent_menu_profile"
+        tools:layout="@layout/fragment_menu_profile" >
+        <action
+            android:id="@+id/action_menuProfile_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_menuProfile_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.qatros.binamurid.ui.profile.EditProfileFragment"
+        android:label="fragment_parent_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.qatros.binamurid.ui.profile.ChangePasswordFragment"
+        android:label="ChangePasswordFragment" />
+
+</navigation>
